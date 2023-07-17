@@ -3,18 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
     <title>Vanilla Weather App</title>
+    <script
+      src="https://kit.fontawesome.com/e5a6fe5acb.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <h1>weather app</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
+    <div class="container">
+      <div>
+        <h1>
+          <span id="cityName">Vancouver</span>
+          <span><i class="fa-solid fa-caret-down" id="searchIcon"></i></span>
+          <span><i class="fa-solid fa-location-dot"></i></span>
+          <br />
+          <input type="text" id="searchInput" placeholder="Search City" />
+        </h1>
+
+        <div class="row">
+          <div class="col-8">
+            <span id="tempOfTheDay">19</span>
+            <span id="c-f-btn"><a>℃ </a>|</span>
+            <span id="f-c-btn"><a>℉</a></span>
+            <br />
+            <span id="todayInfo">
+              <span id="today">Friday</span>
+              <span id="hourNow">10</span>:
+              <span id="minuteNow">02</span>
+              <span id="weatherCondition"> , few clouds</span>
+              <br />
+              <i class="fa-solid fa-droplet"></i>
+              <span id="humidityNow">72%</span> ,
+              <i class="fa-sharp fa-solid fa-wind"></i>
+              <span id="windNow">3.09km/h</span>
+            </span>
+          </div>
+          <div class="col-4">
+            <span class="secondDay">Sat</span> <br />
+            <i class="fa-solid fa-cloud"></i> <br />
+            <span class="lowestTemp1">12</span> /
+            <span class="highestTemp1">14</span>
+            <br />
+            <span class="thirdDay">Sun</span> <br />
+            <i class="fa-solid fa-cloud-rain"></i> <br />
+            <span class="lowestTemp2">12</span> /
+            <span class="highestTemp2">14</span>
+            <br />
+            <span class="FourthDay">Mon</span> <br />
+            <i class="fa-solid fa-cloud"></i> <br />
+            <span class="lowestTemp3">12</span> /
+            <span class="highestTemp3">14</span>
+          </div>
+        </div>
+      </div>
+      open source code by Aimen Zafar. Hosted on Netlify.
+    </div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
