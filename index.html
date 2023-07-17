@@ -20,20 +20,31 @@
   </head>
   <body>
     <div class="container">
-      <div>
-        <h1>
-          <span id="cityName">Vancouver</span>
-          <span><i class="fa-solid fa-caret-down" id="searchIcon"></i></span>
-          <span><i class="fa-solid fa-location-dot"></i></span>
-          <br />
-          <input type="text" id="searchInput" placeholder="Search City" />
-        </h1>
-
+      <div class="weather-card">
         <div class="row">
-          <div class="col-8">
+          <div class="col-10">
+            <h1>
+              <span id="cityName">Vancouver</span>
+              <span
+                ><i class="fa-solid fa-caret-down" id="searchIcon"></i
+              ></span>
+              <span
+                ><i class="fa-solid fa-location-dot locater" id="locater"></i
+              ></span>
+              <br />
+              <input
+                type="text"
+                id="searchInput"
+                class="searchInput"
+                placeholder="Search City"
+              />
+            </h1>
             <span id="tempOfTheDay">19</span>
-            <span id="c-f-btn"><a>℃ </a>|</span>
-            <span id="f-c-btn"><a>℉</a></span>
+            <span class="tempUnits">
+              <span id="c-f-btn"><a>℃ </a>|</span>
+              <span id="f-c-btn"><a>℉</a></span>
+            </span>
+
             <br />
             <span id="todayInfo">
               <span id="today">Friday</span>
@@ -42,22 +53,22 @@
               <span id="weatherCondition"> , few clouds</span>
               <br />
               <i class="fa-solid fa-droplet"></i>
-              <span id="humidityNow">72%</span> ,
-              <i class="fa-sharp fa-solid fa-wind"></i>
+              <span id="humidityNow">72% </span>
+              <i class="fa-sharp fa-solid fa-wind"> </i>
               <span id="windNow">3.09km/h</span>
             </span>
           </div>
-          <div class="col-4">
+          <div class="col-2 forecast">
             <span class="secondDay">Sat</span> <br />
             <i class="fa-solid fa-cloud"></i> <br />
             <span class="lowestTemp1">12</span> /
             <span class="highestTemp1">14</span>
-            <br />
+            <hr />
             <span class="thirdDay">Sun</span> <br />
             <i class="fa-solid fa-cloud-rain"></i> <br />
             <span class="lowestTemp2">12</span> /
             <span class="highestTemp2">14</span>
-            <br />
+            <hr />
             <span class="FourthDay">Mon</span> <br />
             <i class="fa-solid fa-cloud"></i> <br />
             <span class="lowestTemp3">12</span> /
@@ -65,11 +76,15 @@
           </div>
         </div>
       </div>
-      <a href="https://github.com/aimen114/weather-app-project.git"
+      <a
+        href="https://github.com/aimen114/weather-app-project.git"
+        target="_blank"
         >open source code</a
       >
       by Aimen Zafar. Hosted on
-      <a href="https://subtle-faloodeh-3015a7.netlify.app/">Netlify.</a>
+      <a href="https://subtle-faloodeh-3015a7.netlify.app/" target="_blank"
+        >Netlify.</a
+      >
     </div>
 
     <script src="src/app.js"></script>

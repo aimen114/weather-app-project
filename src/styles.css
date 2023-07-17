@@ -1,9 +1,43 @@
+.weather-card {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgb(197, 243, 250) 6%,
+    rgb(24, 102, 128) 100%
+  );
+  max-width: 60%;
+  max-height: 50%;
+  margin: 15% auto;
+  padding: 30px;
+  color: rgb(24, 102, 128);
+  border-radius: 20px;
+}
 h1 {
-  color: blueviolet;
+  font-size: 30px;
+  font-weight: lighter;
 }
-#searchInput {
-  display: none;
+.searchInput {
+  border: none;
+  color: rgb(24, 102, 128);
+  font-size: 20px;
 }
-#searcIcon {
-  color: brown;
+#tempOfTheDay {
+  font-size: 70px;
+}
+.tempUnits {
+  vertical-align: 30px;
+}
+.forecast {
+  color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.241);
+  border: 2px solid aliceblue;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px;
+}
+.locater {
+  font-size: 20px;
+}
+#searchIcon {
+  font-size: 20px;
 }
