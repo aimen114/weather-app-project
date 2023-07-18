@@ -41,6 +41,7 @@ function displayWeatherInfo(response) {
   let wind = document.getElementById("windNow");
   let weatherDisc = document.getElementById("weatherCondition");
   let date = document.getElementById("date");
+  let nowIcon = document.getElementById("nowIcon");
 
   temp.innerHTML = Math.round(response.data.temperature.current);
   cityInput.innerHTML = response.data.city;
@@ -48,10 +49,15 @@ function displayWeatherInfo(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   weatherDisc.innerHTML = response.data.condition.description;
   date.innerHTML = formatDate(response.data.time * 1000);
+  nowIcon.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  nowIcon.setAttribute("alt", `${response.data.condition.description}`);
 }
 
 let apiKey = "95aba4bfo096ef39t52469746eae7704";
-let searchedCity = "Paris";
+let searchedCity = "Victoria";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchedCity}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayWeatherInfo);

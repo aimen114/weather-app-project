@@ -12,44 +12,58 @@
     rgb(197, 243, 250) 6%,
     rgb(24, 102, 128) 100%
   );
-
   padding: 30px;
-
   border-radius: 20px;
 }
+
 h1 {
   font-size: 30px;
   font-weight: lighter;
 }
+
 .searchForm {
   display: inline-flex;
   max-width: 20em;
-  border-radius: 10px; /* Change border radius */
-  color: #ffffff; /* Change text color */
-  background-color: rgba(24, 102, 128, 0.278); /* Change background color */
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: rgba(24, 102, 128, 0.278);
 }
+
 .searchInput {
   background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   border: none;
 }
+
 .searchInput::placeholder {
   color: #ffffff;
 }
+
 .searchButton {
   color: #ffffff;
   border-radius: 10px;
   border: none;
 }
+
 .searchButton:hover {
   background-color: rgba(24, 102, 128, 0.347);
 }
+
+img {
+  max-height: 50%;
+  vertical-align: top;
+  margin: 0% auto;
+}
+
 #tempOfTheDay {
   font-size: 70px;
+  margin: 0% auto;
 }
+
 .tempUnits {
   vertical-align: 30px;
 }
+
 .forecast {
   color: aliceblue;
   background-color: rgba(240, 248, 255, 0.241);
@@ -58,9 +72,11 @@ h1 {
   text-align: center;
   padding: 15px;
 }
+
 .locater {
   font-size: 20px;
 }
+
 #searchIcon {
   font-size: 20px;
 }
