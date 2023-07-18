@@ -1,25 +1,48 @@
-.weather-card {
+.container {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 50%;
+  max-height: 40%;
+  margin: 15% auto;
+  color: rgb(24, 102, 128);
+}
+
+.weather-card {
   background: linear-gradient(
     90deg,
     rgb(197, 243, 250) 6%,
     rgb(24, 102, 128) 100%
   );
-  max-width: 60%;
-  max-height: 50%;
-  margin: 15% auto;
+
   padding: 30px;
-  color: rgb(24, 102, 128);
+
   border-radius: 20px;
 }
 h1 {
   font-size: 30px;
   font-weight: lighter;
 }
+.searchForm {
+  display: inline-flex;
+  max-width: 20em;
+  border-radius: 10px; /* Change border radius */
+  color: #ffffff; /* Change text color */
+  background-color: rgba(24, 102, 128, 0.278); /* Change background color */
+}
 .searchInput {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
   border: none;
-  color: rgb(24, 102, 128);
-  font-size: 20px;
+}
+.searchInput::placeholder {
+  color: #ffffff;
+}
+.searchButton {
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+}
+.searchButton:hover {
+  background-color: rgba(24, 102, 128, 0.347);
 }
 #tempOfTheDay {
   font-size: 70px;

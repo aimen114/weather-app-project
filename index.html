@@ -26,18 +26,34 @@
             <h1>
               <span id="cityName">Vancouver</span>
               <span
-                ><i class="fa-solid fa-caret-down" id="searchIcon"></i
-              ></span>
-              <span
-                ><i class="fa-solid fa-location-dot locater" id="locater"></i
+                ><i
+                  onclick="toggleSearchBarVisibility()"
+                  class="fa-solid fa-caret-down"
+                  id="searchIcon"
+                ></i>
+              </span>
+              <span>
+                <i class="fa-solid fa-location-dot locater" id="locater"></i
               ></span>
               <br />
-              <input
-                type="text"
-                id="searchInput"
-                class="searchInput"
-                placeholder="Search City"
-              />
+              <div id="input-group">
+                <form class="searchForm" id="searchForm">
+                  <input
+                    type="text"
+                    class="form-control searchInput"
+                    placeholder="Search city"
+                    aria-label="Search city"
+                    aria-describedby="button-addon2"
+                  />
+                  <button
+                    class="btn btn-outline-secondary searchButton"
+                    type="button submit"
+                    id="button-addon2"
+                  >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </form>
+              </div>
             </h1>
             <span id="tempOfTheDay">19</span>
             <span class="tempUnits">
@@ -46,17 +62,14 @@
             </span>
 
             <br />
-            <span id="todayInfo">
-              <span id="today">Friday</span>
-              <span id="hourNow">10</span>:
-              <span id="minuteNow">02</span>
-              <span id="weatherCondition"> , few clouds</span>
-              <br />
-              <i class="fa-solid fa-droplet"></i>
-              <span id="humidityNow">72% </span>
-              <i class="fa-sharp fa-solid fa-wind"> </i>
-              <span id="windNow">3.09km/h</span>
-            </span>
+            <span id="date"> Friday 10:02 </span>
+            ,<span id="weatherCondition"> few clouds</span>
+            <br />
+            <i class="fa-solid fa-droplet"></i>
+            <span id="humidityNow">72</span>%
+
+            <i class="fa-sharp fa-solid fa-wind"> </i>
+            <span id="windNow">3.09</span>km/h
           </div>
           <div class="col-2 forecast">
             <span class="secondDay">Sat</span> <br />
