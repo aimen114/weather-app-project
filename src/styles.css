@@ -80,3 +80,18 @@ img {
 #searchIcon {
   font-size: 20px;
 }
+
+.active {
+  color: rgb(24, 102, 128);
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
+#f-c-btn {
+  color: rgb(24, 102, 128);
+}
+#c-f-btn {
+  color: rgb(24, 102, 128);
+}

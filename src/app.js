@@ -33,6 +33,7 @@ function formatDate(timestamp) {
 }
 
 function displayWeatherInfo(response) {
+  console.log(response.data);
   let temp = document.getElementById("tempOfTheDay");
   let cityInput = document.getElementById("cityName");
   let humidity = document.getElementById("humidityNow");
@@ -41,7 +42,9 @@ function displayWeatherInfo(response) {
   let date = document.getElementById("date");
   let nowIcon = document.getElementById("nowIcon");
 
-  temp.innerHTML = Math.round(response.data.temperature.current);
+  celsiusTemp = response.data.temperature.current;
+
+  temp.innerHTML = Math.round(celsiusTemp);
   cityInput.innerHTML = response.data.city;
   humidity.innerHTML = Math.round(response.data.temperature.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
@@ -66,6 +69,33 @@ function handleSubmit(event) {
   search(searchInput.value);
   toggleSearchBarVisibility();
 }
-search("Lahore");
+
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+  let temp = document.getElementById("tempOfTheDay");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fTemp = (celsiusTemp * 9) / 5 + 32;
+  temp.innerHTML = Math.round(fTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temp = document.getElementById("tempOfTheDay");
+  temp.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#searchForm");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.getElementById("f-c-btn");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.getElementById("c-f-btn");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+search("Lahore");
