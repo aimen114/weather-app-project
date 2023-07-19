@@ -87,6 +87,19 @@ function displayCelsiusTemp(event) {
   temp.innerHTML = Math.round(celsiusTemp);
 }
 
+function locateUser(position) {
+  let lon = position.coordinates.longitude;
+  let lat = position.coordinates.latitude;
+  let apiKey = "95aba4bfo096ef39t52469746eae7704";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayWeatherInfo);
+}
+function handleLocaterClick(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(locateUser);
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector("#searchForm");
@@ -99,3 +112,6 @@ let celsiusLink = document.getElementById("c-f-btn");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Lahore");
+
+let locate = document.getElementById("locater");
+locate.addEventListener("click", handleLocaterClick);

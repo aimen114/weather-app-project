@@ -76,9 +76,17 @@ img {
 .locater {
   font-size: 20px;
 }
+.locater:hover {
+  cursor: pointer;
+  color: rgb(13, 58, 73);
+}
 
 #searchIcon {
   font-size: 20px;
+}
+#searchIcon:hover {
+  cursor: pointer;
+  color: rgb(13, 58, 73);
 }
 
 .active {
@@ -90,8 +98,8 @@ img {
   text-decoration: none;
 }
 #f-c-btn {
-  color: rgb(24, 102, 128);
+  color: rgb(13, 58, 73);
 }
 #c-f-btn {
-  color: rgb(24, 102, 128);
+  color: rgb(13, 58, 73);
 }
