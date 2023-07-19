@@ -111,7 +111,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.getElementById("c-f-btn");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-search("Lahore");
+search("Moscow");
 
 let locate = document.getElementById("locater");
 locate.addEventListener("click", handleLocaterClick);
