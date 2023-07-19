@@ -33,8 +33,6 @@ function formatDate(timestamp) {
 }
 
 function displayWeatherInfo(response) {
-  console.log(response);
-  console.log(response.data.time);
   let temp = document.getElementById("tempOfTheDay");
   let cityInput = document.getElementById("cityName");
   let humidity = document.getElementById("humidityNow");
@@ -56,8 +54,18 @@ function displayWeatherInfo(response) {
   nowIcon.setAttribute("alt", `${response.data.condition.description}`);
 }
 
-let apiKey = "95aba4bfo096ef39t52469746eae7704";
-let searchedCity = "Victoria";
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${searchedCity}&key=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "95aba4bfo096ef39t52469746eae7704";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherInfo);
+}
 
-axios.get(apiUrl).then(displayWeatherInfo);
+function handleSubmit(event) {
+  event.preventDefault();
+  let searchInput = document.getElementById("cityInput");
+  search(searchInput.value);
+  toggleSearchBarVisibility();
+}
+search("Lahore");
+let form = document.querySelector("#searchForm");
+form.addEventListener("submit", handleSubmit);
