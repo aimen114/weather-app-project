@@ -33,7 +33,6 @@ function formatDate(timestamp) {
 }
 
 function displayWeatherInfo(response) {
-  console.log(response.data);
   let temp = document.getElementById("tempOfTheDay");
   let cityInput = document.getElementById("cityName");
   let humidity = document.getElementById("humidityNow");
@@ -93,7 +92,6 @@ function locateUser(position) {
   let apiKey = "95aba4bfo096ef39t52469746eae7704";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
 
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherInfo);
 }
 function handleLocaterClick(event) {
