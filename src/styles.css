@@ -64,15 +64,6 @@ img {
   vertical-align: 30px;
 }
 
-.forecast {
-  color: aliceblue;
-  background-color: rgba(240, 248, 255, 0.241);
-  border: 2px solid aliceblue;
-  border-radius: 20px;
-  text-align: center;
-  padding: 15px;
-}
-
 .locater {
   font-size: 20px;
 }
@@ -102,4 +93,26 @@ img {
 }
 #c-f-btn {
   color: rgb(13, 58, 73);
+}
+.col-2 {
+  color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.241);
+  border: 2px solid aliceblue;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.weather-forecast-date {
+  font-size: 20px;
+}
+.forecast img {
+  width: 30px;
+  display: block;
+}
+.weather-forecast-temp {
+  font-size: 15px;
+  display: inline;
+}
+.lowestTemp {
+  color: rgba(240, 248, 255, 0.797);
 }
