@@ -88,10 +88,11 @@ function displayCelsiusTemp(event) {
 }
 
 function locateUser(position) {
-  let lon = position.coordinates.longitude;
-  let lat = position.coordinates.latitude;
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
   let apiKey = "95aba4bfo096ef39t52469746eae7704";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+
   console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherInfo);
 }
@@ -111,7 +112,7 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.getElementById("c-f-btn");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-search("Moscow");
+search("victoria");
 
 let locate = document.getElementById("locater");
 locate.addEventListener("click", handleLocaterClick);
